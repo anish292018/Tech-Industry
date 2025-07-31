@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About 7Skill Academy - Learn about our journey, mission, and team of digital marketing experts">
+    <title>About Us | 7Skill Academy</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind with our custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A1AFF', // Royal Blue
+                        secondary: '#F8F8F8', // Light Grey
+                        dark: '#111111', // Jet Black
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-poppins text-dark bg-white">
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed w-full bg-white shadow-md z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-primary">7Skill Academy</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="font-medium hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="font-medium text-primary">About</a>
+                    <a href="services.html" class="font-medium hover:text-primary transition-colors">Services</a>
+                    <a href="blog.html" class="font-medium hover:text-primary transition-colors">Blog</a>
+                    <a href="contact.html" class="font-medium hover:text-primary transition-colors">Contact Us</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <a href="#free-demo" class="hidden md:block bg-primary text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition-all">
+                    Free Demo Class
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-dark focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white mt-4 rounded-lg shadow-lg absolute left-0 right-0 mx-4 p-4 z-50">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="font-medium hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="font-medium text-primary">About</a>
+                    <a href="services.html" class="font-medium hover:text-primary transition-colors">Services</a>
+                    <a href="blog.html" class="font-medium hover:text-primary transition-colors">Blog</a>
+                    <a href="contact.html" class="font-medium hover:text-primary transition-colors">Contact Us</a>
+                    <a href="#free-demo" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition-all text-center">
+                        Free Demo Class
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-28 pb-10 md:pt-32 md:pb-16 bg-gradient-to-br from-white to-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">About <span class="text-primary">7Skill Academy</span></h1>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                Learn about our journey, mission, and the team behind 7Skill Academy.
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                    <img src="https://placehold.co/600x400/1A1AFF/FFFFFF?text=Our+Story" alt="7Skill Academy Story" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pl-12 fade-in">
+                    <h2 class="text-3xl font-bold mb-6">Our Story</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        7Skill Academy was founded in 2018 with a vision to bridge the digital skills gap and empower individuals and businesses to thrive in the digital landscape.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        What started as a small training center has now evolved into a comprehensive digital education and AI automation hub, serving clients from over 20 countries worldwide.
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        Our unique approach of providing personalized 1:1 training has helped thousands of students transform their careers and businesses by mastering digital marketing skills and implementing cutting-edge AI solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="py-16 bg-secondary">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row-reverse items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                    <img src="https://placehold.co/600x400/1A1AFF/FFFFFF?text=Our+Mission" alt="7Skill Academy Mission" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pr-12 fade-in">
+                    <h2 class="text-3xl font-bold mb-6">Our Mission</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        At 7Skill Academy, our mission is to democratize digital skills education and make advanced AI automation accessible to businesses of all sizes.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        We believe that personalized education and tailored automation solutions are the keys to success in the digital age. That's why we focus on providing 1:1 training and custom AI implementations that address the specific needs of each student and client.
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        Our goal is to empower 1 million individuals and businesses by 2030, helping them harness the power of digital marketing and AI to achieve sustainable growth and success.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-10">Our <span class="text-primary">Values</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Value 1 -->
+                <div class="p-6 bg-secondary rounded-lg shadow-md fade-in">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Personalized Learning</h3>
+                    <p class="text-gray-700">
+                        We believe that every individual learns differently, which is why we provide personalized 1:1 training tailored to each student's pace and learning style.
+                    </p>
+                </div>
+                
+                <!-- Value 2 -->
+                <div class="p-6 bg-secondary rounded-lg shadow-md fade-in">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Innovation</h3>
+                    <p class="text-gray-700">
+                        We constantly innovate our training methods and automation solutions to stay ahead of the rapidly evolving digital landscape and provide cutting-edge education.
+                    </p>
+                </div>
+                
+                <!-- Value 3 -->
+                <div class="p-6 bg-secondary rounded-lg shadow-md fade-in">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Partnership</h3>
+                    <p class="text-gray-700">
+                        We see ourselves as partners in our clients' success, working collaboratively to achieve their goals and providing ongoing support beyond the training period.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="py-16 bg-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-10">Meet Our <span class="text-primary">Team</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                    <img src="https://placehold.co/400x400/1A1AFF/FFFFFF?text=J" alt="John Smith" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-1">John Smith</h3>
+                        <p class="text-primary mb-3">Founder & CEO</p>
+                        <p class="text-gray-700 mb-4">
+                            Digital marketing expert with 15+ years of experience in the industry.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                    <img src="https://placehold.co/400x400/1A1AFF/FFFFFF?text=S" alt="Sarah Johnson" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-1">Sarah Johnson</h3>
+                        <p class="text-primary mb-3">Head of Training</p>
+                        <p class="text-gray-700 mb-4">
+                            Certified digital marketing trainer with expertise in SEO and content marketing.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                    <img src="https://placehold.co/400x400/1A1AFF/FFFFFF?text=M" alt="Michael Chen" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-1">Michael Chen</h3>
+                        <p class="text-primary mb-3">AI Solutions Director</p>
+                        <p class="text-gray-700 mb-4">
+                            AI specialist with a background in machine learning and automation systems.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                    <img src="https://placehold.co/400x400/1A1AFF/FFFFFF?text=A" alt="Amanda Rodriguez" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-1">Amanda Rodriguez</h3>
+                        <p class="text-primary mb-3">Client Success Manager</p>
+                        <p class="text-gray-700 mb-4">
+                            Dedicated to ensuring client satisfaction and successful implementation of solutions.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-10 text-center">Our <span class="text-primary">Achievements</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <!-- Achievement 1 -->
+                <div class="p-6 fade-in">
+                    <div class="text-primary text-5xl font-bold mb-4 counter">5000+</div>
+                    <h3 class="text-xl font-semibold">Students Trained</h3>
+                </div>
+                
+                <!-- Achievement 2 -->
+                <div class="p-6 fade-in">
+                    <div class="text-primary text-5xl font-bold mb-4 counter">200+</div>
+                    <h3 class="text-xl font-semibold">Business Clients</h3>
+                </div>
+                
+                <!-- Achievement 3 -->
+                <div class="p-6 fade-in">
+                    <div class="text-primary text-5xl font-bold mb-4 counter">20+</div>
+                    <h3 class="text-xl font-semibold">Countries Reached</h3>
+                </div>
+                
+                <!-- Achievement 4 -->
+                <div class="p-6 fade-in">
+                    <div class="text-primary text-5xl font-bold mb-4 counter">15+</div>
+                    <h3 class="text-xl font-semibold">Industry Awards</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Digital Skills?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                Join 7Skill Academy today and take the first step towards mastering digital marketing and AI automation.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#free-demo" class="bg-white text-primary px-8 py-3 rounded-full hover:bg-opacity-90 transition-all text-center font-medium">
+                    Book a Free Demo Class
+                </a>
+                <a href="contact.html" class="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-primary transition-all text-center font-medium">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Demo Class Popup (Optional Enhancement) -->
+    <div id="free-demo" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full relative">
+            <button id="close-demo" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <h3 class="text-2xl font-bold mb-4">Book Your Free Demo Class</h3>
+            <p class="text-gray-700 mb-6">Fill out the form below to schedule your personalized free demo class.</p>
+            
+            <form id="demo-form" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Interested In</label>
+                    <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        <option value="">Select a Service</option>
+                        <option value="seo">SEO Training</option>
+                        <option value="meta">Meta Ads Training</option>
+                        <option value="google">Google Ads Training</option>
+                        <option value="gmb">GMB Training</option>
+                        <option value="funnels">Sales Funnels Training</option>
+                        <option value="chatbots">AI Chatbots</option>
+                        <option value="crm">CRM Automation</option>
+                        <option value="gmb-auto">GMB Automation</option>
+                        <option value="whatsapp">WhatsApp Automation</option>
+                        <option value="workflow">Workflow Design</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="w-full bg-primary text-white py-3 rounded-md hover:bg-opacity-90 transition-all font-medium">
+                    Schedule My Free Demo
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">7Skill Academy</h4>
+                    <p class="mb-4 text-gray-300">
+                        Empowering individuals and businesses with digital skills and AI solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-primary transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Our Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#digital-marketing" class="text-gray-300 hover:text-white transition-colors">Digital Marketing Training</a></li>
+                        <li><a href="services.html#ai-automation" class="text-gray-300 hover:text-white transition-colors">AI Automation Services</a></li>
+                        <li><a href="#free-demo" class="text-gray-300 hover:text-white transition-colors">Free Demo Class</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                            <span class="text-gray-300">123 Digital Avenue, Tech City, 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-primary"></i>
+                            <span class="text-gray-300">+1 (123) 456-7890</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary"></i>
+                            <span class="text-gray-300">info@7skillacademy.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-300">
+                <p>&copy; 2023 7Skill Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

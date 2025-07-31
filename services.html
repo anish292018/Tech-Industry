@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="7Skill Academy Services - Live 1:1 Digital Marketing Training and AI Automation Solutions for Businesses">
+    <title>Services | 7Skill Academy</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind with our custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A1AFF', // Royal Blue
+                        secondary: '#F8F8F8', // Light Grey
+                        dark: '#111111', // Jet Black
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-poppins text-dark bg-white">
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed w-full bg-white shadow-md z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-primary">7Skill Academy</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="font-medium hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="font-medium hover:text-primary transition-colors">About</a>
+                    <a href="services.html" class="font-medium text-primary">Services</a>
+                    <a href="blog.html" class="font-medium hover:text-primary transition-colors">Blog</a>
+                    <a href="contact.html" class="font-medium hover:text-primary transition-colors">Contact Us</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <a href="#free-demo" class="hidden md:block bg-primary text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition-all">
+                    Free Demo Class
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-dark focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white mt-4 rounded-lg shadow-lg absolute left-0 right-0 mx-4 p-4 z-50">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="font-medium hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="font-medium hover:text-primary transition-colors">About</a>
+                    <a href="services.html" class="font-medium text-primary">Services</a>
+                    <a href="blog.html" class="font-medium hover:text-primary transition-colors">Blog</a>
+                    <a href="contact.html" class="font-medium hover:text-primary transition-colors">Contact Us</a>
+                    <a href="#free-demo" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition-all text-center">
+                        Free Demo Class
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-28 pb-10 md:pt-32 md:pb-16 bg-gradient-to-br from-white to-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Our <span class="text-primary">Services</span></h1>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                Explore our comprehensive range of digital marketing training programs and AI automation solutions.
+            </p>
+        </div>
+    </section>
+
+    <!-- Service Categories Navigation -->
+    <section class="py-8 bg-white border-b border-gray-200 sticky top-16 z-40 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#digital-marketing" class="px-6 py-2 bg-secondary hover:bg-primary hover:text-white rounded-full transition-all">
+                    Digital Marketing Training
+                </a>
+                <a href="#ai-automation" class="px-6 py-2 bg-secondary hover:bg-primary hover:text-white rounded-full transition-all">
+                    AI Automation Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Marketing Training Section -->
+    <section id="digital-marketing" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Digital Marketing <span class="text-primary">Training</span></h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Our personalized 1:1 training programs are designed to help you master digital marketing skills and advance your career.
+                </p>
+            </div>
+            
+            <!-- SEO Training -->
+            <div id="seo" class="flex flex-col md:flex-row items-center mb-16 fade-in">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Search Engine Optimization (SEO)</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Master the art of optimizing websites to rank higher on search engines and drive organic traffic.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>On-page and off-page SEO techniques</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Keyword research and competitive analysis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Technical SEO and site audits</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Content optimization strategies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>SEO analytics and reporting</span>
+                        </li>
+                    </ul>
+                    <a href="#free-demo" class="bg-primary text-white px-6 py-2 rounded-full inline-block hover:bg-opacity-90 transition-all">
+                        Book a Free Demo Class
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/1A1AFF/FFFFFF?text=SEO+Training" alt="SEO Training" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+            </div>
+            
+            <!-- Meta Ads Training -->
+            <div id="meta-ads" class="flex flex-col md:flex-row-reverse items-center mb-16 fade-in">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Meta Ads</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Learn how to create and optimize effective advertising campaigns on Facebook and Instagram.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Facebook and Instagram ad campaign setup</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Audience targeting and segmentation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Ad creative design and copywriting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Campaign optimization and scaling</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Performance tracking and ROI analysis</span>
+                        </li>
+                    </ul>
+                    <a href="#free-demo" class="bg-primary text-white px-6 py-2 rounded-full inline-block hover:bg-opacity-90 transition-all">
+                        Book a Free Demo Class
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/1A1AFF/FFFFFF?text=Meta+Ads+Training" alt="Meta Ads Training" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+            </div>
+            
+            <!-- Google Ads Training -->
+            <div id="google-ads" class="flex flex-col md:flex-row items-center mb-16 fade-in">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Google Ads</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Master the art of creating and managing successful Google advertising campaigns.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Search, Display, and Video campaign setup</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Keyword research and bidding strategies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Ad copy creation and testing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Conversion tracking and optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Google Ads automation and scripts</span>
+                        </li>
+                    </ul>
+                    <a href="#free-demo" class="bg-primary text-white px-6 py-2 rounded-full inline-block hover:bg-opacity-90 transition-all">
+                        Book a Free Demo Class
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/1A1AFF/FFFFFF?text=Google+Ads+Training" alt="Google Ads Training" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+            </div>
+            
+            <!-- GMB Training -->
+            <div id="gmb" class="flex flex-col md:flex-row-reverse items-center mb-16 fade-in">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Google My Business</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Learn how to optimize your local presence and attract nearby customers with effective GMB strategies.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>GMB profile setup and optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Local SEO strategies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Review management and response tactics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>GMB posts and updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Local search performance tracking</span>
+                        </li>
+                    </ul>
+                    <a href="#free-demo" class="bg-primary text-white px-6 py-2 rounded-full inline-block hover:bg-opacity-90 transition-all">
+                        Book a Free Demo Class
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/1A1AFF/FFFFFF?text=GMB+Training" alt="Google My Business Training" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+            </div>
+            
+            <!-- Sales Funnels Training -->
+            <div id="funnels" class="flex flex-col md:flex-row items-center fade-in">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Sales Funnels</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Master the art of creating effective sales funnels that convert visitors into loyal customers.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Funnel strategy and mapping</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Landing page design and optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Email marketing sequences</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Upsell and cross-sell strategies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Funnel analytics and optimization</span>
+                        </li>
+                    </ul>
+                    <a href="#free-demo" class="bg-primary text-white px-6 py-2 rounded-full inline-block hover:bg-opacity-90 transition-all">
+                        Book a Free Demo Class
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/1A1AFF/FFFFFF?text=Sales+Funnels+Training" alt="Sales Funnels Training" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Automation Services Section -->
+    <section id="ai-automation" class="py-16 bg-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">AI Automation <span class="text-primary">Services</span></h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Our AI automation solutions help businesses streamline operations, enhance customer experience, and drive growth.
+                </p>
+            </div>
+            
+            <!-- AI Chatbots -->
+            <div id="chatbots" class="flex flex-col md:flex-row items-center mb-16 fade-in">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">AI Chatbots</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Implement intelligent chatbots to enhance customer service, automate responses, and increase engagement.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Custom chatbot development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Natural language processing integration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Multi-platform deployment (website, social media)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Lead qualification and collection</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Analytics and continuous improvement</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-full inline-block hover:bg-opacity-90 transition-all">
+                        Get a Custom Quote
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/1A1AFF/FFFFFF?text=AI+Chatbots" alt="AI Chatbots" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+            </div>
+            
+            <!-- CRM Automation -->
+            <div id="crm" class="flex flex-col md:flex-row-reverse items-center mb-16 fade-in">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">CRM Automation</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Streamline your customer relationship management with AI-powered automation solutions.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>CRM system integration and setup</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Automated lead scoring and qualification</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Customer journey automation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Personalized communication workflows</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Sales and marketing alignment</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-full inline-block hover:bg-opacity-90 transition-all">
+                        Get a Custom Quote
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/1A1AFF/FFFFFF?text=CRM+Automation" alt="CRM Automation" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+            </div>
+            
+            <!-- GMB Automation -->
+            <div id="gmb-automation" class="flex flex-col md:flex-row items-center mb-16 fade-in">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-store-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">GMB Automation</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Automate your Google My Business updates and responses for a consistent local presence.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Automated review responses</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Scheduled posts and updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Photo and content management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Insights and performance reporting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Multi-location management</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-full inline-block hover:bg-opacity-90 transition-all">
+                        Get a Custom Quote
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/1A1AFF/FFFFFF?text=GMB+Automation" alt="GMB Automation" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+            </div>
+            
+            <!-- WhatsApp Automation -->
+            <div id="whatsapp" class="flex flex-col md:flex-row-reverse items-center mb-16 fade-in">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">WhatsApp Automation</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Set up automated WhatsApp messaging for better customer communication and engagement.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>WhatsApp Business API integration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Automated response workflows</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Broadcast messaging campaigns</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Order and appointment notifications</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Customer support automation</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-full inline-block hover:bg-opacity-90 transition-all">
+                        Get a Custom Quote
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/1A1AFF/FFFFFF?text=WhatsApp+Automation" alt="WhatsApp Automation" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+            </div>
+            
+            <!-- Workflow Design -->
+            <div id="workflow" class="flex flex-col md:flex-row items-center fade-in">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Workflow Design</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Create efficient business workflows with AI integration for maximum productivity and automation.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Business process analysis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Custom workflow design</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Integration of AI and automation tools</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Implementation and staff training</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Ongoing optimization and support</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-full inline-block hover:bg-opacity-90 transition-all">
+                        Get a Custom Quote
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/1A1AFF/FFFFFF?text=Workflow+Design" alt="Workflow Design" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Flexible <span class="text-primary">Pricing</span></h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Choose the training or service package that best fits your needs and budget.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Package -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all fade-in">
+                    <div class="bg-secondary p-6 text-center">
+                        <h3 class="text-2xl font-bold mb-2">Basic</h3>
+                        <div class="text-primary text-4xl font-bold mb-2">$499</div>
+                        <p class="text-gray-600">One-time payment</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>5 hours of 1:1 training</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Single digital marketing skill</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Basic learning materials</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Email support for 30 days</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Certificate of completion</span>
+                            </li>
+                        </ul>
+                        <a href="#free-demo" class="block text-center bg-primary text-white py-3 rounded-md hover:bg-opacity-90 transition-all font-medium">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Pro Package -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all transform scale-105 z-10 fade-in">
+                    <div class="bg-primary p-6 text-center text-white">
+                        <div class="inline-block bg-white text-primary text-xs font-bold px-3 py-1 rounded-full mb-3">MOST POPULAR</div>
+                        <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                        <div class="text-white text-4xl font-bold mb-2">$999</div>
+                        <p class="text-gray-200">One-time payment</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>12 hours of 1:1 training</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Three digital marketing skills</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Comprehensive learning materials</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Email & chat support for 60 days</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Certificate of completion</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>2 practice assignments with feedback</span>
+                            </li>
+                        </ul>
+                        <a href="#free-demo" class="block text-center bg-primary text-white py-3 rounded-md hover:bg-opacity-90 transition-all font-medium">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Enterprise Package -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all fade-in">
+                    <div class="bg-secondary p-6 text-center">
+                        <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                        <div class="text-primary text-4xl font-bold mb-2">Custom</div>
+                        <p class="text-gray-600">Tailored solutions</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Unlimited 1:1 training hours</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>All digital marketing skills</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Premium learning materials</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Priority support for 12 months</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Advanced certification</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Custom AI automation solutions</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="block text-center bg-primary text-white py-3 rounded-md hover:bg-opacity-90 transition-all font-medium">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Frequently Asked <span class="text-primary">Questions</span></h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Find answers to common questions about our training programs and services.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6 fade-in">
+                    <button class="faq-question flex justify-between items-center w-full bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all">
+                        <span class="text-lg font-semibold">How does the 1:1 training work?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer bg-white mt-2 p-4 rounded-lg shadow-md hidden">
+                        <p class="text-gray-700">
+                            Our 1:1 training is conducted via video conferencing platforms like Zoom or Google Meet. You'll be paired with an expert trainer who will customize the curriculum based on your current skill level and learning goals. Sessions are scheduled at your convenience, and you'll have direct access to your trainer for questions and guidance throughout the program.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="mb-6 fade-in">
+                    <button class="faq-question flex justify-between items-center w-full bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all">
+                        <span class="text-lg font-semibold">Do I need any prior experience for the training programs?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer bg-white mt-2 p-4 rounded-lg shadow-md hidden">
+                        <p class="text-gray-700">
+                            No prior experience is required for our beginner-level courses. We start from the basics and gradually progress to advanced concepts. For intermediate and advanced courses, some basic knowledge of digital marketing concepts is beneficial but not mandatory. Our trainers will assess your current knowledge level and adjust the curriculum accordingly.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="mb-6 fade-in">
+                    <button class="faq-question flex justify-between items-center w-full bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all">
+                        <span class="text-lg font-semibold">How long does it take to implement AI automation solutions?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer bg-white mt-2 p-4 rounded-lg shadow-md hidden">
+                        <p class="text-gray-700">
+                            The implementation timeline varies depending on the complexity of the solution and your business requirements. Simple chatbot implementations can be completed in 1-2 weeks, while comprehensive CRM automation or workflow designs may take 4-8 weeks. During our initial consultation, we'll provide a detailed timeline based on your specific needs.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="mb-6 fade-in">
+                    <button class="faq-question flex justify-between items-center w-full bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all">
+                        <span class="text-lg font-semibold">Do you offer refunds if I'm not satisfied with the training?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer bg-white mt-2 p-4 rounded-lg shadow-md hidden">
+                        <p class="text-gray-700">
+                            Yes, we offer a 7-day money-back guarantee for our training programs. If you're not satisfied with the quality of training after your first session, you can request a full refund. For our AI automation services, we work on a milestone-based payment structure, ensuring you only pay for completed and approved work.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="fade-in">
+                    <button class="faq-question flex justify-between items-center w-full bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all">
+                        <span class="text-lg font-semibold">Can you customize the training for my specific industry?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer bg-white mt-2 p-4 rounded-lg shadow-md hidden">
+                        <p class="text-gray-700">
+                            Absolutely! Industry-specific customization is one of our specialties. Our trainers will tailor the curriculum, examples, and case studies to your specific industry and business model. This ensures that you learn strategies and techniques that are directly applicable to your business context and target audience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Digital Skills?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                Join 7Skill Academy today and take the first step towards mastering digital marketing and AI automation.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#free-demo" class="bg-white text-primary px-8 py-3 rounded-full hover:bg-opacity-90 transition-all text-center font-medium">
+                    Book a Free Demo Class
+                </a>
+                <a href="contact.html" class="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-primary transition-all text-center font-medium">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Demo Class Popup (Optional Enhancement) -->
+    <div id="free-demo" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full relative">
+            <button id="close-demo" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <h3 class="text-2xl font-bold mb-4">Book Your Free Demo Class</h3>
+            <p class="text-gray-700 mb-6">Fill out the form below to schedule your personalized free demo class.</p>
+            
+            <form id="demo-form" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Interested In</label>
+                    <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        <option value="">Select a Service</option>
+                        <option value="seo">SEO Training</option>
+                        <option value="meta">Meta Ads Training</option>
+                        <option value="google">Google Ads Training</option>
+                        <option value="gmb">GMB Training</option>
+                        <option value="funnels">Sales Funnels Training</option>
+                        <option value="chatbots">AI Chatbots</option>
+                        <option value="crm">CRM Automation</option>
+                        <option value="gmb-auto">GMB Automation</option>
+                        <option value="whatsapp">WhatsApp Automation</option>
+                        <option value="workflow">Workflow Design</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="w-full bg-primary text-white py-3 rounded-md hover:bg-opacity-90 transition-all font-medium">
+                    Schedule My Free Demo
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">7Skill Academy</h4>
+                    <p class="mb-4 text-gray-300">
+                        Empowering individuals and businesses with digital skills and AI solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-primary transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Our Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#digital-marketing" class="text-gray-300 hover:text-white transition-colors">Digital Marketing Training</a></li>
+                        <li><a href="#ai-automation" class="text-gray-300 hover:text-white transition-colors">AI Automation Services</a></li>
+                        <li><a href="#free-demo" class="text-gray-300 hover:text-white transition-colors">Free Demo Class</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                            <span class="text-gray-300">123 Digital Avenue, Tech City, 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-primary"></i>
+                            <span class="text-gray-300">+1 (123) 456-7890</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary"></i>
+                            <span class="text-gray-300">info@7skillacademy.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-300">
+                <p>&copy; 2023 7Skill Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- FAQ Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    // Toggle answer visibility
+                    answer.classList.toggle('hidden');
+                    
+                    // Rotate icon
+                    if (answer.classList.contains('hidden')) {
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
